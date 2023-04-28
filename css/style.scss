@@ -1,0 +1,305 @@
+/*questions
+gap?
+BEM?
+
+*/
+
+/* Variables */
+// Colors
+$white: #ffffff;
+$greyBackground: #f8fafc;
+$grey: #f3f4f6;
+$blue: #194278;
+$green: #00966c;
+$lightGreen: #32d17e;
+$orange: #f69240;
+$borderColor: #e5e7eb;
+$inputBorderColor: #d1d5db;
+
+// Typography
+$openSans: "Open Sans", sans-serif;
+$fontSize: 12px;
+$regular: 400;
+$bold: 700;
+$fontColor: #374151;
+$lightFontColor: #6b7280;
+
+// General
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $openSans;
+  font-size: $fontSize;
+  font-weight: $regular;
+  background-color: $greyBackground;
+  color: $fontColor;
+}
+
+.container {
+  width: 540px;
+  margin: 0 auto;
+
+    @media only screen and (max-width: 480px) {
+        width: 95%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $bold;
+}
+
+// Buttons
+button {
+  border: none;
+
+  &:hover {
+    transition: 0.3s;
+  }
+}
+
+.btn-white {
+  background: $white;
+  border: 1px solid $inputBorderColor;
+  margin-right: 16px;
+}
+
+.btn-orange {
+  background: $orange;
+}
+
+// header
+header {
+  background: $blue;
+  height: 133px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  color: $white;
+}
+
+.header {
+  width: 1512px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-right: 18px;
+    font-size: 15px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $white;
+  }
+}
+
+// main
+main {
+  background: $greyBackground;
+  padding: 16px 0;
+}
+
+section {
+  background: $white;
+  border: 1px solid $borderColor;
+  border-radius: 8px;
+}
+
+section:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+// Section maintenance
+.maintenance {
+  &__top {
+    padding: 16px;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__subtitle {
+    margin-top: 4px;
+    color: $lightFontColor;
+    line-height: 18px;
+  }
+
+  &__bottom {
+    display: flex;
+    padding: 16px;
+  }
+
+  &__number {
+    border-right: 1px solid $borderColor;
+    padding-right: 16px;
+    color: $lightFontColor;
+  }
+
+  &__asset {
+    margin-left: 16px;
+    color: $lightFontColor;
+  }
+
+  &__value {
+    color: $fontColor;
+    margin-top: 8px;
+    padding: 4px 8px;
+    
+    &.active {
+      background: $grey;
+      border-radius: 10px;
+    }
+  }
+}
+
+// Section task
+.task {
+  font-size: 12px;
+
+  &__title {
+    padding: 8px 16px;
+  }
+
+  hr {
+    border-top: 1px solid $borderColor;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+
+    i {
+      margin-left: 8px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    padding: 16px 16px 16px 42px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 35px;
+
+    button {
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: $bold;
+      font-size: 14px;
+    }
+  }
+}
+
+.form {
+  &__group {
+    margin-top: 16px;
+    padding: 8px;
+    border: 1px solid $borderColor;
+    background-color: $white;
+    border-radius: 8px;
+
+    i {
+      color: $borderColor;
+      // width: 18px;
+      // height: 18px;
+    }
+
+    &.checked {
+      background-color: $grey;
+
+      i {
+        color: $green;
+      }
+
+      label {
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  &__input {
+    display: block;
+    margin-top: 8px;
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 14px;
+    border: 1px solid $inputBorderColor;
+    border-radius: 8px;
+
+    &.left {
+      flex: 10;
+      border-radius: 8px 0px 0px 8px;
+    }
+
+    &.right {
+      max-width: 50px;
+      border-radius: 0px 8px 8px 0px;
+      font-size: 14px;
+      font-weight: $bold;
+    }
+  }
+
+  &__expected {
+    font-size: 10px;
+    color: $lightFontColor;
+    margin-top: 8px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+
+    button {
+      flex: 1;
+      background: $white;
+      padding: 8px 0;
+      border: 1px solid $borderColor;
+    }
+  }
+}
+
+.buttons__ml {
+  display: flex;
+}
+
+.button {
+  &__left {
+    border-radius: 8px 0 0 8px;
+    &:hover {
+      background: $lightGreen;
+      border-color: $green;
+    }
+  }
+
+  &__center {
+    &:hover {
+      background: #ff615d;
+      border-color: red;
+    }
+  }
+
+  &__right {
+    border-radius: 0 8px 8px 0;
+    &:hover {
+      background: $orange;
+      border-color: orange;
+    }
+  }
+}

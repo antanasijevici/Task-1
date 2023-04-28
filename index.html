@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Figma</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <i class="fa-solid fa-arrow-left"></i>
+        <h3 class="header__title">Work Order Details</h3>
+      </div>
+    </header>
+    <main>
+      <section class="maintenance container">
+        <div class="maintenance__top">
+          <h3 class="maintenance__title">Preventative Maintenance</h3>
+          <p class="maintenance__subtitle">
+            Standard Asset Type Definition: Compressed Gas <br />
+            Proportioners, Oxygen-Air
+          </p>
+        </div>
+        <div class="maintenance__bottom">
+          <div class="maintenance__number">
+            <p class="maintenance__label">Number</p>
+            <!-- <p class="maintenance__value--active">CWKD1058433</p> -->
+            <p class="maintenance__value active">CWKD1058433</p>
+          </div>
+          <div class="maintenance__asset">
+            <p class="maintenance__label">Asset</p>
+            <p class="maintenance__value">UltraBlender - AAF02336</p>
+          </div>
+        </div>
+      </section>
+      <section class="task container">
+        <h4 class="task__title">Tasks</h4>
+        <hr />
+        <div class="task__form">
+          <div class="task__heading">
+            <!-- <i class="fa-solid fa-caret-down"></i> -->
+            <h4>Compressed Gas Proportioners, Oxygen-Air</h4>
+            <div class="task__cycle">
+              <span>2/4</span>
+              <i class="fa-solid fa-circle-half-stroke fa-lg"></i>
+            </div>
+          </div>
+          <form class="form">
+            <div class="form__group checked">
+              <i class="fa-regular fa-circle-check fa-lg"></i>
+              <label class="form__label" for="date"
+                >01. Date of Last Overhaul</label
+              >
+              <input class="form__input" type="date" id="date" name="date" />
+            </div>
+            <div class="form__group checked">
+              <i class="fa-regular fa-circle-check fa-lg"></i>
+              <label class="form__label">02. Visual Inspection</label>
+              <div class="form__buttons">
+                <button class="button__left">Pass</button>
+                <button class="button__center">Fail</button>
+                <button class="button__right">N/A</button>
+              </div>
+              <p class="form__expected">Expected Answer: Pass</p>
+            </div>
+            <div class="form__group">
+              <i class="fa-regular fa-circle fa-lg"></i>
+              <label class="form__label">03. Audible Alarm</label>
+              <div class="form__buttons">
+                <button class="button__left">Pass</button>
+                <button class="button__center">Fail</button>
+                <button class="button__right">N/A</button>
+              </div>
+              <p class="form__expected">Expected Answer: Pass</p>
+            </div>
+            <div class="form__group">
+              <i class="fa-regular fa-circle fa-lg"></i>
+              <label class="form__label" for="name"
+                >04. Flow Verification</label
+              >
+              <div class="form__buttons">
+                <button class="button__left">Yes</button>
+                <button class="button__center">No</button>
+                <button class="button__right">N/A</button>
+              </div>
+              <p class="form__expected">Expected Answer: Pass</p>
+            </div>
+            <div class="form__group">
+              <i class="fa-regular fa-circle fa-lg"></i>
+              <label class="form__label" for="name">05. 21% O2 Actual</label>
+              <div class="buttons__ml">
+                <input
+                  class="form__input left"
+                  type="text"
+                  placeholder="Type here..."
+                />
+                <button class="form__input right">ml</button>
+              </div>
+            </div>
+            <div class="form__group">
+              <i class="fa-regular fa-circle fa-lg"></i>
+              <label class="form__label" for="name">06. 30% O2 Actual</label>
+              <input
+                class="form__input"
+                type="text"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="task__buttons">
+              <button class="btn-white" type="submit">Cancel</button>
+              <button class="btn-orange">Save Work Order</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
